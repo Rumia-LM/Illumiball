@@ -5,6 +5,7 @@ using UnityEngine;
 public class GravityController : MonoBehaviour
 {
     const float Gravity=9.81f;
+    [SerializeField]
     public float gravityScale = 1.0f;
     // Start is called before the first frame update
     void Start()
@@ -23,7 +24,7 @@ public class GravityController : MonoBehaviour
             vector.z = Input.acceleration.z;
         }else{
             vector.x = Input.GetAxis("Horizontal");
-            vector.y = Input.GetAxis("Vertical");
+            vector.z = Input.GetAxis("Vertical");
 
             if(Input.GetKey("z")){
                 vector.y = 1.0f;
