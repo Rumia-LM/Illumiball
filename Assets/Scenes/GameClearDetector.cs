@@ -9,8 +9,9 @@ public class GameClearDetector : MonoBehaviour
     public Hole holeGreen;
 
     void OnGUI(){
+        GUI.matrix = Matrix4x4.Scale(Vector3.one*2);
         if (holeRed.IsHolding() && holeBlue.IsHolding() && holeGreen.IsHolding()){
-            GUI.Label(new Rect(50, 50, 100, 30), "Game Clear!");
+            GUI.Label(new Rect(10, 10, 100, 30), "Game Clear!");
         }
     }
     // Start is called before the first frame update
