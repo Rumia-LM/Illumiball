@@ -7,9 +7,14 @@ public class Hole : MonoBehaviour
     public string targetTag;
 
     bool isHolding;
-    public bool IsHolding(){
-        return isHolding;
+
+    public bool IsHolding{
+        get
+        {return isHolding;}
     }
+    //public bool IsHolding(){
+    //    return isHolding;
+    //}
 
     void OnTriggerEnter(Collider other){
         if(other.gameObject.tag==targetTag){
