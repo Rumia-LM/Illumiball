@@ -29,7 +29,7 @@ public class Hole : MonoBehaviour
         Vector3 direction = other.gameObject.transform.position - transform.position;
         direction.Normalize();
 
-        if(other.gameObject.tag==targetTag){
+        if(other.gameObject.CompareTag(targetTag)){
             r.velocity*=0.9f;
             r.AddForce(direction* -20.0f, ForceMode.Acceleration);
         }else{
